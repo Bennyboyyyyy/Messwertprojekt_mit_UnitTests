@@ -13,7 +13,7 @@ namespace Messwertverarbeitung.Tests
             double erwartet = 3.0;
 
             // Act: Durchschnitt berechnen.
-            double ergebnis = MesswertBerechnung.Durchschnitt(1, 2, 3, 4, 5);
+            double ergebnis = (double)MesswertBerechnung.Average(1, 2, 3, 4, 5);
 
             // Assert: Ergebnis mit dem erwarteten Wert vergleichen.
             Assert.AreEqual(erwartet, ergebnis, 1e-10);
@@ -43,7 +43,7 @@ namespace Messwertverarbeitung.Tests
             // Arrange: Jede DataRow liefert fünf Messwerte und den erwarteten Durchschnitt.
 
             // Act: Durchschnitt für die jeweilige Datenzeile berechnen.
-            double ergebnis = MesswertBerechnung.Durchschnitt(m1, m2, m3, m4, m5);
+            double ergebnis = (double)MesswertBerechnung.Average(m1, m2, m3, m4, m5);
 
             // Assert: Das Ergebnis dieser Datenzeile überprüfen.
             Assert.AreEqual(erwartet, ergebnis, 1e-10);
